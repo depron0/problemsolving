@@ -1,1 +1,1 @@
-# solvingProblems
+# Solving various coding problems / challenges
