@@ -54,3 +54,48 @@ function firstAndLast(str) {
   // BETTER: str.slice(1, -1)
 }
 
+
+// take the number of petals of each flower and return true if they are in love (one flower even and one odd), and false if they aren't 
+function loveFlowers(flower1, flower2) {
+  if ((flower1 % 2 === 0 && flower2 % 2 != 0) ||
+      (flower1 % 2 != 0 && flower2 % 2 === 0)) {
+        return true
+      } else {
+        return false
+      }
+  // BETTER: return flower1 % 2 !== flower2 % 2;
+}
+
+
+// copy some paperwork: there are 'n' classmates and the paperwork has 'm' pages, calculate how many blank pages do you need
+function paperwork(n, m) {
+  if(n < 0 || m < 0){
+    return 0
+  } else {
+    return n * m
+  }
+  // BETTER: return n > 0 && m > 0 ? n * m : 0
+}
+
+
+// check whether the provided array contains the value
+function containsValueCheck(a, x) {
+  return a.indexOf(x) >= 0 ? true : false
+  // ALT: return a.includes(x)
+}
+
+
+// return an array of integers from n to 1 where n>0
+function reverseCount(n) {
+  let num = []
+  for (let i = n; i > 0; i--) {
+    num.push(i)
+  }
+  // OR:
+  do {
+    num.push(n)
+    n--
+  } while (n > 0)
+
+  return num
+}
