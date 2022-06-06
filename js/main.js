@@ -91,11 +91,67 @@ function reverseCount(n) {
   for (let i = n; i > 0; i--) {
     num.push(i)
   }
-  // OR:
+
+  return num
+  // Don't think this works, as it would return the
   do {
     num.push(n)
     n--
   } while (n > 0)
 
   return num
+}
+
+
+// remove the spaces from the string, then return the result
+function removeSpaces(str) {
+  return str.split(' ').join('')
+  // Alternative: .replace() and RegEx to target the spaces
+}
+
+
+// find the smallest integer in an array
+function smallestInt(arr) {
+  return Math.min(...arr)
+}
+
+
+// summation of every number from 1 to num
+function summation(num) {
+  let sum = 0
+  for(let i = 0; i <= num; i++){
+    sum += i
+  }
+  return sum
+}
+
+
+// man drinks 0.5l of water per hour of cycling: given time in hours return number of liters drunk rounded down
+function drinkWater(time) {
+  return Math.floor(time * 0.5)
+}
+
+
+// first century: year 1 up to and including year 100. given a year, return the century it is in 
+function whichCentury(year) {
+  return Math.floor((year - 1) / 100) + 1
+}
+
+
+// return a greeting statement that uses an input
+function greetings(name) {
+  return `Hello, ${name} how are you doing today?`
+}
+
+
+// convert the given boolean value into its string representation
+function boolToStr(b) {
+  return b ? 'true' : 'false'
+  // OR b.toString()
+}
+
+
+// return a new array with each value doubled
+function doubleValues(x) {
+  return x.map(n => n * 2)
 }
