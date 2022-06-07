@@ -155,3 +155,30 @@ function boolToStr(b) {
 function doubleValues(x) {
   return x.map(n => n * 2)
 }
+
+
+// find the needle in the haystack (array)
+function findNeedle(arr) {
+  let needle = arr.findIndex(element => element === "needle")
+  return `found the needle at position ${needle}`
+  // BETTER: return "found the needle at position " + arr.indexOf("needle");
+}
+
+
+// return the additive inverse of each given number
+function invert(arr) {
+  return arr.map(element => element * -1)
+  // OR: return array.map( x => x === 0 ? x : -x)
+}
+
+
+// convert string to uppercase
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}
+
+
+// fake binary: digits under 5 = 0, digits over 5 = 1
+function fakeBinary(x) {
+  return x.split("").map(e => e < 5 ? 0 : 1).join('')
+}
