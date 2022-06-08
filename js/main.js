@@ -182,3 +182,34 @@ function makeUpperCase(str) {
 function fakeBinary(x) {
   return x.split("").map(e => e < 5 ? 0 : 1).join('')
 }
+
+
+// each dragon takes 2 bullets to be defeated, will the hero survive?
+function hero(bullets, dragons){
+  return bullets >= (dragons * 2) ? true : false
+}
+
+
+// calculate the average of the numbers in a given list
+function findAverage(arr) {
+  if (arr.length === 0) {
+    return 0
+  } else {
+    let newArray = arr.reduce((acc,c) => acc + c)
+    return newArray / arr.length
+  }   
+  // return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+}
+
+
+// return the average of the given array rounded down to its nearest integer
+function averageRoundDown(arr) {
+  return Math.floor(arr.reduce((acc,c) => acc + c, 0) / arr.length)
+}
+
+
+// calculate the average and compare your score, return True if you scored higher, else False
+function compareScore(classPoints, yourPoints) {
+  let classAverage = classPoints.reduce((acc,c) => acc + c) / classPoints.length
+  return classAverage < yourPoints ? true : false
+}
