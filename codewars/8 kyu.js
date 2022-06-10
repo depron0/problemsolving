@@ -258,3 +258,37 @@ function basicOp(operation, value1, value2) {
   }
   // switch would also work
 }
+
+
+// if name starts with r, you play the banjo
+function doYouPlayBanjo(name) {
+  if (name.charAt(0) === 'R' || name.charAt(0) === 'r') {
+    return `${name} plays banjo`
+  } else {
+    return `${name} does not play banjo`
+  }
+  // better: name[0].toLowerCase() === 'r
+}
+
+
+// convert DNA to RNA
+function DNAtoRNA(dna) {
+  return dna.replace(/T/g, 'U')
+}
+
+
+// multiply by 8 if number is even, otherwise by nine
+function multiplyNumber(num) {
+  if (num % 2 === 0){
+    return num * 8
+  } else {
+    return num * 9
+  }
+  // alt: ternary n % 2 == 0 ? n * 8 : n * 9
+}
+
+
+// sum arrays
+function sumArrays(nums) {
+  return nums.reduce((acc,c) => acc + c, 0)
+}
