@@ -292,3 +292,39 @@ function multiplyNumber(num) {
 function sumArrays(nums) {
   return nums.reduce((acc,c) => acc + c, 0)
 }
+
+
+// estimate stairs climbed in 20 years. given an array of weekdays, each weekday is an array - the data represents 1 year
+// access nested array, and add up all the values, then multiply by 20
+function stairsIn20(s) {
+  let total = 0
+  for (let i = 0; i < s.length; i++) {
+    for (let j = 0; j < s[i].length; j++) {
+      total += s[i][j]
+    }
+  }
+  return total * 20
+}
+
+
+// convert a name into initials (strictly 2 words with one space)
+function abbrName(name) {
+  let initials = name.split(' ').map((x) => x[0]).join('.')
+  return initials.toUpperCase()
+}
+
+
+// create 2 functions to find highest and lowest values of a list
+// alt: anonymous function: const min = (list) => Math.min(...list), or sort list and return index 0
+function min(list) {
+  return Math.min.apply(Math, list)
+}
+function max(list) {
+  return Math.max.apply(Math, list)
+}
+
+
+// add numbers in given array, except highest and lowest value
+function sumArray(arr) {
+  return array ? array.sort((a,b) => a-b).slice(1,-1).reduce((acc,c) => acc + c, 0) : 0
+}
