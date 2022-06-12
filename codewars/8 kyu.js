@@ -328,3 +328,40 @@ function max(list) {
 function sumArray(arr) {
   return array ? array.sort((a,b) => a-b).slice(1,-1).reduce((acc,c) => acc + c, 0) : 0
 }
+
+
+// populate an array with all numbers up to and including given number
+function countNums(num) {
+  let count = []
+  for(let i = 1; i <= n; i++){
+    count.push(i)
+  }
+  return count
+}
+
+
+// convert array of words into single sentence
+function createSentence(words) {
+  return words.join(' ')
+}
+
+
+// rock, paper, scissors - who won?
+function rockPaperScissors(p1,p2) {
+  if(p1 === 'scissors' && p2 === 'paper'
+  || p1 === 'paper' && p2 === 'rock'
+  || p1 === 'rock' && p2 === 'scissors'){
+    return 'Player 1 won!'
+  } else if(p1 === p2){
+    return 'Draw!'
+  } else{
+    return 'Player 2 won!'
+  }
+}
+
+
+// is it divisible by 2 numbers?
+function divideBy(num,a,b) {
+  return num % a === 0 && num % b === 0 ? true : false
+}
+function DivideBy2(num, a, b) {return num%a + num%b === 0}
