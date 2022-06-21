@@ -365,3 +365,33 @@ function divideBy(num,a,b) {
   return num % a === 0 && num % b === 0 ? true : false
 }
 function DivideBy2(num, a, b) {return num%a + num%b === 0}
+
+
+// calculate the cost of renting a car - every day costs $40, 7 or more days = $50 off your total,  3 or more days = $20 off your total
+function rentalCarCost(d) {
+  let total = d * 40
+  if(d >= 7){
+    total = total - 50
+  } else if(d >= 3){
+    total = total - 20
+  }
+  return total
+}
+
+
+// calculate volume of cuboid
+function volumeOfCuboid(length, width, height) {
+  return length * width * height
+}
+
+
+// personalized greeting
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest'
+}
+
+
+// return area if square, return perimiter if rectangle
+function areaOrPerimiter(l, w) {
+  return l === w ? l * w : (l * 2) + (w * 2)
+}
