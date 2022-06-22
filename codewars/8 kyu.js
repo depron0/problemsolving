@@ -395,3 +395,28 @@ function greet (name, owner) {
 function areaOrPerimiter(l, w) {
   return l === w ? l * w : (l * 2) + (w * 2)
 }
+
+
+// given an array of integers, count the positives & sum the negatives, 0 is neither, return empty array if empty or null
+function countPositivesSumNegatives(input) {
+  let newArr = []
+  let x = 0
+  let y = 0
+  
+  if(input != null && input != 0){
+  input.forEach(element => {
+    if(element > 0){
+        x += 1
+    } else if(element < 0){
+        y += element
+    }
+  })
+  newArr = [x,y]}
+  return newArr
+} // chunky looking code, but it works - this one was a STRUGGLE
+
+
+// convert string to array of words
+function stringToArray(string){
+  return string.split(' ')
+}
