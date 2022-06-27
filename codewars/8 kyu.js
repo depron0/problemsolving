@@ -420,3 +420,28 @@ function countPositivesSumNegatives(input) {
 function stringToArray(string){
   return string.split(' ')
 }
+
+
+// multiply two numbers
+let multiply = (num1, num2) => num1 * num2
+
+
+// check if string is all uppercase
+function isUpperCase(str) {
+  return str === str.toUpperCase() ? true : false
+}
+
+
+// will you escape the shark? shark distance, shark speed, your speed, distance to pontoon, dolphin?(halfs the swim speed of shark)
+function sharkAttack(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if(dolphin == true){
+    return pontoonDistance / youSpeed <= sharkDistance / (sharkSpeed / 2) ? 'Alive!' : 'Shark Bait!'
+  }
+  return pontoonDistance / youSpeed <= sharkDistance / sharkSpeed ? 'Alive!' : 'Shark Bait!'
+}
+
+
+// plural or not ?
+function plural(n) {
+  return n !== 1 ? true : false
+}
