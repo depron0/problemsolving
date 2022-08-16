@@ -445,3 +445,90 @@ function sharkAttack(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolph
 function plural(n) {
   return n !== 1 ? true : false
 }
+
+
+// convert number to reversed array of digits
+function reverseArray(num){
+  return String(num).split('').reverse().map(Number)
+}
+
+
+// find average of 3 scores, and return letter accosiated with that grade
+function letterGrade(score1, score2, score3) {
+  let average = (s1 + s2 + s3) / 3
+    if(average >= 90 && average <= 100){
+      return 'A'
+    } else if(average >= 80 && average < 90){
+      return 'B'
+    } else if(average >= 70 && average < 80){
+      return 'C'
+    } else if(average >= 60 && average < 70){
+      return 'D'
+    } else if(average >= 0 && average < 60){
+      return 'F'
+    }
+
+  // SIMPLER:
+  /* 
+    if (average < 60)  return "F";
+    else if (average < 70) return "D";
+    else if (average < 80) return "C";
+    else if (average < 90) return "B";
+    else return "A"; */
+}
+
+
+function sameFirstAndLast(beast, dish) {
+  if(beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1)){
+    return true
+  } else {
+    return false
+  }
+
+  //SIMPLER:
+  // return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+}
+
+
+// can all the passengers fit on the bus? yes => return 0, no => return number of people left behind
+// cap = total seats, on = passengers already on, wait = number of people waiting
+function busPassengers(cap, on, wait) {
+  if(on + wait < cap){
+    return 0
+  } else {
+    Math.abs(cap - (on + wait))
+  }
+}
+
+
+// given 2 angles of a triangle, return the 3rd angle
+function otherAngle(a, b) {
+  return 180 - (a + b)
+}
+
+
+// provided a number between 0-9, return it as a word  -- encouraged to use switch statement
+function numToWord(num) {
+  switch (num) {
+    case 0 :
+      return 'Zero'
+    case 1 :
+      return 'One'
+    case 2 :
+      return 'Two'
+    case 3 :
+      return 'Three'
+    case 4 :
+      return 'Four'
+    case 5 :
+      return 'Five'
+    case 6 :
+      return 'Six'
+    case 7 :
+      return 'Seven'
+    case 8 :
+      return 'Eight'
+    case 9 :
+      return 'Nine'
+  }
+}
