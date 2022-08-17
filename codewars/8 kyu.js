@@ -532,3 +532,31 @@ function numToWord(num) {
       return 'Nine'
   }
 }
+
+
+// make a traffic light: takes in current color, and updates to the next
+function updateLight(current) {
+  switch (current) {
+    case 'green':
+      return 'yellow'
+    case 'yellow':
+      return 'red'
+    case 'red':
+      return 'green'
+  }
+
+  // SIMPLER:
+  // return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+}
+
+
+// count by X
+function countBy(n, x){
+  let result = []
+  for (let i = 1; i < x + 1; i++) {
+    result.push(i * n)
+  }
+  return result
+}
+
+
