@@ -560,3 +560,31 @@ function countBy(n, x){
 }
 
 
+// is the string uppercase?
+String.prototype.isUpperCase = function() {
+  return this === this.toUpperCase()
+}
+
+
+// find multiples of given number, up to given limit
+function findMultiples(integer, limit) {
+  let result = []
+  for (let i = 1; (i * integer) <= limit; i++) { 
+    result.push(i * integer)
+    // OR: for (let i = int; i<=limit ; i+=int)
+    // result.push(i)
+  }
+  return result
+}
+
+
+// reverse names (firstname lastname => lastname firstname)
+function reverseName(str) {
+  return str.split(' ').reverse().join(' ')
+}
+
+
+// duplicate all characters in string
+function doubleChar(str) {
+  return str.split('').map(i => [i+i]).join('')
+}

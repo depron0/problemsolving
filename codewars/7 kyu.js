@@ -15,3 +15,10 @@ function highAndLow(nums) {
     let b = [a[0], a[a.length -1]].join(' ')
     return b
 }
+
+
+// check that all values in the array are below or equal to the limit value, return true or false
+function underLimit(arr, limit) {
+    return arr.reduce((a,b) => Math.max(a,b)) <= limit ? true : false
+    // OR: return Math.max(...a) <= limit
+}
