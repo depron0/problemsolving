@@ -588,3 +588,35 @@ function reverseName(str) {
 function doubleChar(str) {
   return str.split('').map(i => [i+i]).join('')
 }
+
+
+// generate array of integers between (and including) given integers
+function betweenNums(a, b){
+  let array = []
+  for(let i = a; i <= b; i++){
+    array.push(i)
+  }
+  return array
+}
+
+
+// create an array and fill it with integers from 0 to 1 below given integer
+function populateArray(num){
+  let array = []
+  for(let i = 0; i < num; i++){
+    array.push(i)
+  }
+  return array
+}
+
+
+// check if integer is a factor of base
+function checkForFactor(base, factor){
+  return (base % factor) === 0 ? true : false
+}
+
+
+// terminal game, given current position and roll of dice - player moves number of spaces twice
+function gameMoves(position, roll){
+  return position + (roll * 2)
+}

@@ -22,3 +22,23 @@ function underLimit(arr, limit) {
     return arr.reduce((a,b) => Math.max(a,b)) <= limit ? true : false
     // OR: return Math.max(...a) <= limit
 }
+
+
+// rearrange numbers into descending order (given as integer, return as integer)
+function descendingOrder(num){
+    let newNumber = num.toString().split('').sort((a,b) => b - a).join('')
+    return +newNumber
+}
+
+
+// return middle of string
+function getMiddle(str){
+    let middle = ''
+    if (str.length % 2 != 0) {
+    middle = str.substr(str.length / 2, 1)
+    } 
+    if (str.length % 2 === 0){
+    middle = str.substr((str.length / 2) - 1, 2)
+    } 
+    return middle
+}
