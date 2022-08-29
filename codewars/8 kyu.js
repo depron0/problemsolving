@@ -620,3 +620,40 @@ function checkForFactor(base, factor){
 function gameMoves(position, roll){
   return position + (roll * 2)
 }
+
+
+// convert speed from km/h to cm/h, rounded down
+function speedConverter(speed){
+  return Math.floor(speed / 0.036)
+}
+
+
+// given a string 'x years old', return the age as an integer
+function getAge(inputString){
+  return  parseInt(inputString[0])
+}
+
+
+// encouraging messages when practicing hula hooping
+function hoopCount (n) {
+  if(n < 10){
+    return 'Keep at it until you get it'
+  } else {
+    return 'Great, now move on to tricks'
+  }
+}
+
+
+// function for final grade with two parameters: a grade for the exam and a number of completed projects
+function finalGrade(exam, projects) {
+  if (exam > 90 || projects > 10){
+    return 100
+  } else if (exam > 75 && projects >= 5){
+    return 90
+  } else if (exam > 50 && projects >= 2){
+    return 75
+  } else {
+    return 0
+  }
+  // could have used separate if statements
+}

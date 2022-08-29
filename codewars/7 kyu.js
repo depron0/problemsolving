@@ -42,3 +42,11 @@ function getMiddle(str){
     } 
     return middle
 }
+
+
+// return new array with strings filtered out
+function filterList(arr) {
+    return arr.filter(element => typeof(element) === 'number')
+}
+
+
