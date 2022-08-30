@@ -50,3 +50,9 @@ function filterList(arr) {
 }
 
 
+// return number of vowels in the string (all lowercase, if not: add uppercase variants to vowel array, OR make string lowercase before filter)
+function numVowels(str){
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    let filtered = str.split('').filter(x => vowels.includes(x))
+    return filtered.length
+}

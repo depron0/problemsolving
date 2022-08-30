@@ -657,3 +657,56 @@ function finalGrade(exam, projects) {
   }
   // could have used separate if statements
 }
+
+
+// human, cat and dog years
+function yearsHumanCatDog(humanYears){
+  // cat years = 15 for first human year, + 9 for second, + 4 for each after that
+  let catYears = 0
+  // dog years = 15 for first human year, + 9 for second, + 5 for each after that
+  let dogYears = 0
+  
+  if(humanYears === 1){
+    catYears = 15
+    dogYears = 15
+  }
+  if(humanYears === 2){
+    catYears = 15 + 9
+    dogYears = 15 + 9
+  }
+  if(humanYears > 2){
+    catYears = 15 + 9 + ((humanYears - 2) * 4)
+    dogYears = 15 + 9 + ((humanYears - 2) * 5)
+  }
+  return [humanYears,catYears,dogYears]
+}
+
+
+// plucking flower petals, what phrase is on the last petal?
+// make array of phrases, and return number of petals - 1 % array.length
+function flowerPetals(numPetals){
+  let phrases = [
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all'
+  ]
+
+  return phrases[(numPetals - 1) % phrases.length]
+}
+
+
+// check if string is palindrome
+function palindromeCheck(str){
+  return str.toLowerCase() === str.toLowerCase().split('').reverse().join('')
+}
+
+
+// filter out the geese
+function filterGeese(arr){
+  let geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
+
+  return arr.filter(element => !geese.includes(element))
+}
