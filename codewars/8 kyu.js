@@ -710,3 +710,29 @@ function filterGeese(arr){
 
   return arr.filter(element => !geese.includes(element))
 }
+
+
+// return milliseconds since midnight; given hours, minutes and seconds
+// hours = 3.6 × 1000000, minutes = minutes x 60000, seconds = seconds x 1000
+function timePastMidnight(h, m, s,){
+  return Math.floor((h * 3.6 * 1000000) + (m * 60000) + (s * 1000))
+  // SIMPLER: return ((h*3600)+(m*60)+s)*1000
+}
+
+
+// check if you have enough fuel to reach the station
+function enoughFuel(distanceToPump, mpg, fuelLeft){
+  return (mpg * fuelLeft) >= distanceToPump
+}
+
+
+// remove all exclamation marks from given string
+function removeExclamationMarks(str){
+  return str.split('').filter(element => !element.includes('!')).join('')
+}
+
+
+// remove every second element from array
+function removeSecond(arr) {
+  return arr.filter((x,y) => y % 2 === 0)
+}

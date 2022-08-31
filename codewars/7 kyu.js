@@ -1,14 +1,14 @@
 // *** CODEWARS (7 KYU) ***
 
 // square every number
-function squareDigits(num) {
+function squareDigits(num){
     let numArr = num.toString().split('').map(x => Math.pow(x, 2)).join('')
     return parseFloat(numArr)
 }
 
 
 // given a string of space separated numbers, return the highest and lowest number
-function highAndLow(nums) {
+function highAndLow(nums){
     // convert to array, convert to integer, sort high to low
     let a = nums.split(' ').map(x => parseFloat(x)).sort((a,b) => b-a)
     // create array with highest and lowest value, then join together
@@ -18,7 +18,7 @@ function highAndLow(nums) {
 
 
 // check that all values in the array are below or equal to the limit value, return true or false
-function underLimit(arr, limit) {
+function underLimit(arr, limit){
     return arr.reduce((a,b) => Math.max(a,b)) <= limit ? true : false
     // OR: return Math.max(...a) <= limit
 }
@@ -34,7 +34,7 @@ function descendingOrder(num){
 // return middle of string
 function getMiddle(str){
     let middle = ''
-    if (str.length % 2 != 0) {
+    if (str.length % 2 != 0){
     middle = str.substr(str.length / 2, 1)
     } 
     if (str.length % 2 === 0){
@@ -45,7 +45,7 @@ function getMiddle(str){
 
 
 // return new array with strings filtered out
-function filterList(arr) {
+function filterList(arr){
     return arr.filter(element => typeof(element) === 'number')
 }
 
@@ -55,4 +55,19 @@ function numVowels(str){
     let vowels = ['a', 'e', 'i', 'o', 'u']
     let filtered = str.split('').filter(x => vowels.includes(x))
     return filtered.length
+}
+
+
+// remove all the vowels in the string
+function disemvowel(str){
+    let vowels = ['a','A','e','E','i','I','o','O','u','U']
+    return str.split('').filter(element => !vowels.includes(element)).join('')
+}
+
+
+// find shortest string and return its length
+function findShortest(str){
+    let shortestWord = str.split(' ').reduce((shortest, current) => {
+        return current.length < shortest.length ? current : shortest})
+    return shortestWord.length
 }
