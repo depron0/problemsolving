@@ -736,3 +736,18 @@ function removeExclamationMarks(str){
 function removeSecond(arr) {
   return arr.filter((x,y) => y % 2 === 0)
 }
+
+
+// mark object as frozen to prevent changes
+Object.freeze(ObjectToFreeze)
+
+
+// calculate price for billboard (£30 per letter), not allowed to use *
+function billboard(name, price = 30){
+  let total = 0
+  for(let i = 0; i < name.length; i++){
+    total += price
+  }
+  return total
+}
+

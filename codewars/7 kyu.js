@@ -71,3 +71,9 @@ function findShortest(str){
         return current.length < shortest.length ? current : shortest})
     return shortestWord.length
 }
+
+
+// remove given integers contained in second array
+function removeValues(integerList, valueList){
+    return integerList.filter(element => !valueList.includes(element))
+}
