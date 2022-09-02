@@ -751,3 +751,26 @@ function billboard(name, price = 30){
   return total
 }
 
+
+// Messi scores goals in three leagues, return the total number of goals
+function messiGoals(laLigaGoals, copaDelReyGoals, championsLeagueGoals){
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+
+// remove an exclamation mark from the end of the string
+function removeExclamation(str){
+  return str.endsWith('!') ? str.slice(0, -1) : str
+}
+
+
+// return comma-separated values of a two-dimensional numeric array
+function toCSVText(arr){
+  return arr.join('\n')
+}
+
+
+// binary to decimal
+function binaryToDecimal(bin){
+  return parseInt(bin, 2)
+}

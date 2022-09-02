@@ -77,3 +77,19 @@ function findShortest(str){
 function removeValues(integerList, valueList){
     return integerList.filter(element => !valueList.includes(element))
 }
+
+
+// check if array is ascending
+function isAscending(arr){
+    return arr.join('') === arr.sort((a, b) => a - b).join('')
+}
+
+function adjacentElementsProduct(arr){
+    let result = Number.NEGATIVE_INFINITY
+    for(let i = 0; i < arr.length - 1; i++){
+        if(arr[i] * arr[i + 1] > result){
+            result = arr[i] * arr[i + 1]
+        }
+    }
+  return result  
+}
