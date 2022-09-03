@@ -93,3 +93,16 @@ function adjacentElementsProduct(arr){
     }
   return result  
 }
+
+
+// round to ("greater than or equal") the next multiple of 5
+function roundToNextFive(num){
+    while (num % 5 != 0) num++
+    return num
+}
+
+
+// add two numbers together and returns their sum in binary
+function addBinary(a,b){
+    return (a + b).toString(2)
+}

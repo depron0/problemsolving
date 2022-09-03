@@ -774,3 +774,46 @@ function toCSVText(arr){
 function binaryToDecimal(bin){
   return parseInt(bin, 2)
 }
+
+
+// check if variable matches type
+function typeValidation(variable, type){
+  return type === typeof variable
+}
+
+
+// return list of all the powers of 2 with the exponent ranging from 0 to n (inclusive)
+function powerOfTwo(n){
+  let result = []
+  let i = 0
+  do {
+    result.push(Math.pow(2, i))
+    i++
+  } while (i <= n)
+    return result
+}
+
+
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+// a,b,c have to come in that order, I can foresee 6 variations
+function expressionsMatter(a,b,c){
+  let result = a + b + c
+  if ((a + b) * c > result){
+    result = (a + b) * c
+  }
+  if (a + (b * c) > result){
+    result = a + (b * c)
+  }
+  if ((a * b) + c > result){
+    result = (a * b) + c
+  }
+  if (a * (b + c) > result){
+    result = a * (b + c)
+  }
+  if (a * b * c > result){
+    result = a * b * c
+  }
+  return result
+  
+  // BETTER: Math.max(all the variations listed)
+}
