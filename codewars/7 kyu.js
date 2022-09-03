@@ -84,6 +84,8 @@ function isAscending(arr){
     return arr.join('') === arr.sort((a, b) => a - b).join('')
 }
 
+
+// check which two adjacent numbers in array create the highest result
 function adjacentElementsProduct(arr){
     let result = Number.NEGATIVE_INFINITY
     for(let i = 0; i < arr.length - 1; i++){
