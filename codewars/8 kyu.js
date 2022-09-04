@@ -817,3 +817,37 @@ function expressionsMatter(a,b,c){
   
   // BETTER: Math.max(all the variations listed)
 }
+
+
+// given month, return the quarter it belongs to
+function quarterOf(month){
+  switch (month) {
+    case 1: case 2: case 3:
+      return 1
+    case 4: case 5: case 6:
+      return 2
+    case 7: case 8: case 9:
+      return 3
+    case 10: case 11: case 12:
+      return 4
+  }
+}
+
+
+// check array for good or bad ideas - 1 or 2 good ones => return 'Publish!', more than 2 good ones => return 'I smell a series!', otherwise return 'Fail!'
+function goodOrBad(arr){
+  let goodIdeas = arr.filter(element => element.includes('good'))
+  if (goodIdeas.length > 2){
+    return 'I smell a series!'
+  } else if (goodIdeas.length === 0){
+    return 'Fail!'
+  } else {
+    return 'Publish!'
+  }
+}
+
+
+// return true if argument evaluates to NaN, false otherwise
+function isReallyNaN(val){
+  return Number.isNaN(val)
+}

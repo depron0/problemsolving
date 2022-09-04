@@ -108,3 +108,16 @@ function roundToNextFive(num){
 function addBinary(a,b){
     return (a + b).toString(2)
 }
+
+
+// Given a Divisor and a Bound, find largest integer N that is: divisible by divisor; less than or equal to bound; greater than 0
+// parameters will only be positive values, and guaranteed divisor is found
+function findNum(divisor, bound){
+    while (bound % divisor != 0){
+        bound--
+    }
+    return bound
+    // BETTER: return bound - bound % divisor
+}
+
+
