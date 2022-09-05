@@ -851,3 +851,18 @@ function goodOrBad(arr){
 function isReallyNaN(val){
   return Number.isNaN(val)
 }
+
+
+// check if ship is worthy to loot based on weight, figuring out if the weight is booty or people
+// creator function dakes in draft and crew, each crew adds 1.5 units to draft, draft over 20 excluding crew is loot-worthy
+Ship.prototype.isWorthIt = function(){
+  return this.draft - (this.crew * 1.5) > 20
+}
+
+
+// create a welcome message that takes in a name, city and state
+function sayHello(name, city, state){
+  let fullName = name.join(' ')
+  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`
+  // BETTER: not necessary to join name seperately, can be done inside template string like so: £{name.join(' ')}
+}
