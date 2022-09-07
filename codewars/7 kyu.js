@@ -121,3 +121,11 @@ function findNum(divisor, bound){
 }
 
 
+// return the url with anything after the anchor (#) removed
+function removeAnchor(url){
+    if (url.indexOf('#') === -1){
+        return url
+      } else {
+      return url.slice(0,url.indexOf('#'))
+      }
+}

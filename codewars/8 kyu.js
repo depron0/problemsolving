@@ -866,3 +866,16 @@ function sayHello(name, city, state){
   return `Hello, ${fullName}! Welcome to ${city}, ${state}!`
   // BETTER: not necessary to join name seperately, can be done inside template string like so: £{name.join(' ')}
 }
+
+
+// given letter, return it's position in the alphabet
+function alphabetPosition(letter){
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`
+}
+
+
+// return array in reverse
+function reverseArrayOrder(arr){
+  return arr.reverse()
+}
