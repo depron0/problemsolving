@@ -879,3 +879,24 @@ function alphabetPosition(letter){
 function reverseArrayOrder(arr){
   return arr.reverse()
 }
+
+
+// should you set an alarm? if you are employed, and not on vacation => true, otherwise => false
+function setAlarm(employed, vacation){
+  return employed && !vacation
+}
+
+
+// total amount of points in championship
+// wins = 3 points, draws = 1 point, loss = 0 points
+function point(games){
+  let points = 0
+  games.filter(x => {
+    if (x[0] > x[2]) {
+      points += 3
+    } else if(x[0] === x[2]) {
+      points += 1
+    }
+  }) 
+  return points
+}

@@ -129,3 +129,12 @@ function removeAnchor(url){
       return url.slice(0,url.indexOf('#'))
       }
 }
+
+
+// check if string has equal amounts of x's and o's, return boolean
+// string can contain any character
+function equalXO(str){
+    str = str.toLowerCase().split('')
+    return str.filter(lmt => lmt === 'x').length === str.filter(lmt => lmt === 'o').length
+}
+
