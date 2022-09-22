@@ -138,3 +138,54 @@ function equalXO(str){
     return str.filter(lmt => lmt === 'x').length === str.filter(lmt => lmt === 'o').length
 }
 
+
+// find consecutive vowels - a e i o u - loop around as needed
+// return number of conseutive vowels
+function consecutiveVowels(str){
+    let vowels = 'aeiou'
+    let position = 0
+    let counter = 0
+
+    for(letter of str){
+        if(letter == vowels[position]){
+            counter++
+            position = (position + 1) % vowels.length
+        }
+    }
+
+    return counter
+}
+
+
+// given an integer n and two values
+// return array of size n with two values alternating
+function alternatingArray(n,val1,val2){
+    let newArr = []
+    for(let i = 0; i < n; i++){
+        // target odd number index, fill with second value - populate rest with first value
+        if(i % 2 != 0){
+            newArr.push(val2)
+        } else {
+            newArr.push(val1)
+        }
+    }
+    return newArr
+}
+
+
+// røverspråk (robbers language) - all consonants are duplicated with an o added between, vowels are left untouched
+// not using regex for practice reasons
+// consonants = BCDFGHJKLMNPQRSTVWXYZ
+// return str converted to robbers language
+function robbersCode(str){
+    let consonants = 'BCDFGHJKLMNPQRSTVWXYZ'
+    // checks for uppercase consonants, and adds O and duplicate
+    return str.split('').map(x => consonants.includes(x) ? `${x}O${x}`
+    : // checks for lowercase consonants, and adds o and duplicate
+    consonants.toLowerCase().includes(x) ? `${x}o${x}`
+    : // no changes to vowels
+    x
+    ).join('')
+}
+
+
