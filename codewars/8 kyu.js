@@ -900,3 +900,16 @@ function point(games){
   }) 
   return points
 }
+
+
+// given two characters, check if they are the same case
+// if one is not a letter: return -1, if both same case: return 1, if not same case: return 0
+function sameCase(x,y){
+ if(x.toUpperCase() === x.toLowerCase() || y.toLowerCase() === y.toUpperCase()){
+  return -1
+ } else if(x === x.toLowerCase() && y === y.toLowerCase() || x === x.toUpperCase() && y === y.toUpperCase()){
+  return 1
+ } else {
+  return 0
+ }
+}
