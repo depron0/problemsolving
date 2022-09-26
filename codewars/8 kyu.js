@@ -913,3 +913,23 @@ function sameCase(x,y){
   return 0
  }
 }
+
+
+// remove duplicate values from given array
+function removeDuplicates(arr){
+  return [...new Set(arr)]
+}
+
+
+// calculate distgance between first and last pillar
+// given number of pillars(>1), distance between pillars(10-30m), and width of pillars(10-50cm)
+// calculate distance between first and last pillar (excluding thei width of the first and last pillar)
+// return distance in centimeters
+function pillarDistance(pillars,dist,width){
+  if(pillars == 1){
+    return 0
+  } else {
+    return (((pillars - 1) * dist) * 100) + ((pillars - 2) * width)
+  }
+}
+
