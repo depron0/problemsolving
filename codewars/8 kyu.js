@@ -933,3 +933,18 @@ function pillarDistance(pillars,dist,width){
   }
 }
 
+
+// given age of dad and age of son
+// calculate when dad will be OR was twice as old as the son
+function twiceASOld(dadAge, sonAge){
+  let difference = dadAge - sonAge
+  return difference > sonAge ? (difference * 2) - dadAge : dadAge - (difference * 2)
+}
+
+
+// check if number is even or odd
+// floats with decimal part noon equal to zero considered UNEVEN
+function OddOrEven(n){
+  return n % 2 == 0
+}
+
