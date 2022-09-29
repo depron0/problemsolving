@@ -948,3 +948,20 @@ function OddOrEven(n){
   return n % 2 == 0
 }
 
+
+// given an array of numbers with missing values, you need to fill in the gaps
+// return a fixed list with each consecutive number from lowest to highest value
+function fillGaps(nums){
+  for (let i = 1; i < nums.length; i++) {
+    if(nums[i] != nums[i - 1] + 1){
+      nums.splice(i, 0, nums[i - 1] + 1)
+    }
+  }
+  return nums
+}
+
+
+// sort and merge two arrays, and remove duplicates
+function sortAndMerge(arr1,arr2){
+  return arr1.concat(arr2.filter(item => arr1.indexOf(item) < 0)).sort((a,b) => a - b)
+}
