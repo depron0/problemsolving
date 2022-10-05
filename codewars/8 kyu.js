@@ -965,3 +965,24 @@ function fillGaps(nums){
 function sortAndMerge(arr1,arr2){
   return arr1.concat(arr2.filter(item => arr1.indexOf(item) < 0)).sort((a,b) => a - b)
 }
+
+
+// pass the following tests:
+// a == false   -   !a == false   -   a == !a
+const a = []
+
+
+// constructor function that takes in first and last names, and can return full name
+function NameMe(first, last){
+  this.firstName = first;
+  this.lastName = last;
+  this.name = (first + ' ' + last)
+}
+
+
+// give appropriate response to number of dogs your friend got
+function howManyDalmatians(num){
+  let dogs = ['Hardly any', 'More than a handful!', 'Woah that\'s a lot of dogs!', '101 DALMATIANS!!!']
+  
+  return num <= 10 ? dogs[0] : num <= 50 ? dogs[1] : num == 101 ? dogs[3] : dogs[2]
+}
