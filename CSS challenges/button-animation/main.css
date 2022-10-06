@@ -14,7 +14,7 @@ button {
     font-size: 2rem;
     color: black;
     text-shadow: 1px 1px 2px white;
-    background: green;
+    background: lightgreen;
     border: 8px double black;
     border-radius: 50%;
     animation: blink 2s infinite;
@@ -36,7 +36,7 @@ button:hover {
 }
 
 @keyframes blink {
-    0%   {background:red}  
-    50%  {background:blue}   
-    100% {background:red}
+    0%   {background:pink}  
+    50%  {background:aqua}   
+    100% {background:pink}
 }
