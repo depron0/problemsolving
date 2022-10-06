@@ -189,3 +189,16 @@ function robbersCode(str){
 }
 
 
+// given a sequence of different type of values, retrun an object with separate properties for each type
+function separateTypes(input){
+    let number = input.filter(x => typeof(x) == typeof(2))
+    let string = input.filter(y => typeof(y) == typeof(''))
+    let boolean = input.filter(z => typeof(z) == typeof(false))
+  
+    let object = {}
+    if(number.length > 0) object.number = number
+    if(string.length > 0) object.string = string
+    if(boolean.length > 0) object.boolean = boolean
+  
+    return object
+}
