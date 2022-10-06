@@ -986,3 +986,24 @@ function howManyDalmatians(num){
   
   return num <= 10 ? dogs[0] : num <= 50 ? dogs[1] : num == 101 ? dogs[3] : dogs[2]
 }
+
+
+// receive age and return what they can drink
+function drinkByAge(age){
+  return age < 14 ? 'drink toddy' : age < 18 ? 'drink coke' : age < 21 ? 'drink beer' : 'drink whisky'
+}
+
+
+// take in name of programmer, return number of lightsavers they own
+// only zach owns lightsabers, and he owns 18
+function howManyLightsabers(name){
+  return name === 'Zach' ? 18 : 0
+}
+
+
+// there is a wide mouth frog, who keeps asking all the animals questions
+// the alligator loves eating wide mouth frogs, so the frog closes its mouth
+// when the frog encounters the alligator, return small, else return wide
+function wideMouthFrog(animal){
+  return animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
+}
