@@ -1007,3 +1007,21 @@ function howManyLightsabers(name){
 function wideMouthFrog(animal){
   return animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
 }
+
+
+// duck, duck, goose objective is to find chosen player
+// given an array of player objects, return the name of the chosen player
+function duckDuckGoose(players, goose){
+  return players[(goose - 1) % players.length].name
+}
+
+
+// sum the difference between consecutive pairs in array in descending order
+function sumDifferences(arr){
+  arr.sort((a,b) => b-a)
+  let sum = 0
+  for (let i = 0; i < arr.length - 1; i++) {
+    sum += (arr[i] - arr[i + 1])
+  }
+  return sum
+}
