@@ -1,0 +1,45 @@
+.container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.loader{
+    border: 13px dashed;
+    border-color: #6EA5B1 #609CA9 #56929F #4F8692;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite, glowbox 2s ease-in-out infinite alternate;
+}
+
+h1{
+    margin-left: -18%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #609CA9;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes glow{
+    from {
+        text-shadow: 0 0 20px #477985;
+    }
+    to {
+        text-shadow: 0 0 30px #6EA5B1, 0 0 10px #609CA9;
+    }
+}
+
+@keyframes glowbox {
+    from {
+        box-shadow: 0 0 0 10px #F5F9F9;
+    }
+    to {
+        box-shadow: 0 0 0 10px #F5F9F9, 0 0 0 15px #EAF2F4, 0 0 0 20px #E0ECEE, 0 0 0 25px #D5E5E9;
+    }
+}
