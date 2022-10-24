@@ -202,3 +202,13 @@ function separateTypes(input){
   
     return object
 }
+
+
+// given positive integer, remove last digit until left with number that is multiple of 3
+// return n if already multiple of three, if no such number exists return null
+function prevMultOfThree(n){
+    while (n % 3 != 0) {
+        n = n.toString().slice(0, -1)
+    }
+    return Number(n) || null
+}
