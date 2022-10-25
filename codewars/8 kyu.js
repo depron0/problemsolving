@@ -1025,3 +1025,9 @@ function sumDifferences(arr){
   }
   return sum
 }
+
+
+// return remainder of dividing larger number by smaller value
+function divideRemain(x,y){
+  return x > y ? x % y : y % x
+}
