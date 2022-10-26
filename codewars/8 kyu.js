@@ -1031,3 +1031,16 @@ function sumDifferences(arr){
 function divideRemain(x,y){
   return x > y ? x % y : y % x
 }
+
+
+// given a list and an item, return true if item belongs in list, false if no
+function itemIncluded(arr,item){
+  return arr.indexOf(item) != -1
+  // BETTER: arr.includes(item)
+}
+
+
+// create a function that returns 5, without using numerals or +-*/
+function returnFive(){
+  return 'abcde'.length
+}
