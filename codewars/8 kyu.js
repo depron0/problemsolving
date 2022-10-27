@@ -1044,3 +1044,17 @@ function itemIncluded(arr,item){
 function returnFive(){
   return 'abcde'.length
 }
+
+
+// given an array and parameter n (default = 1)
+// return the first n element(s) of the array - return empty if n = 0
+function firstElements(arr, n){
+  return n != 0 ? arr.slice(0, n || 1) : []
+}
+
+
+// given array and value x, check if array contains the value
+// NO LOOPS
+function checkForValue(arr,x){
+  return a.includes(x)
+}
