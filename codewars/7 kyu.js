@@ -212,3 +212,12 @@ function prevMultOfThree(n){
     }
     return Number(n) || null
 }
+
+
+// given a number N, determine if sum of N consecutive numbers is odd or even
+// return Odd if definitely odd, Even if definitely even, Either if it can be either
+function oddEvenOrEither(n){
+    return n % 2 !== 0 ? 'Either' :
+    (n / 2) % 2 === 0 ? 'Even' :
+    'Odd'
+}
