@@ -1058,3 +1058,17 @@ function firstElements(arr, n){
 function checkForValue(arr,x){
   return a.includes(x)
 }
+
+
+// vowel remover
+// y is not a vowel, no uppercase
+function vowelRemover(str){
+  let vowels = 'aeiou'
+  return str.split('').filter(x => vowels.indexOf(x) === -1).join('')
+}
+
+
+// square the argument given
+function squareArg(arg){
+  return Math.pow(arg,2)
+}
