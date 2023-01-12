@@ -1072,3 +1072,20 @@ function vowelRemover(str){
 function squareArg(arg){
   return Math.pow(arg,2)
 }
+
+
+// given string, return array with each word and their length with space between
+function wordLength(str){
+  let arr = str.split(' ')
+  return arr.map(n => n + ' ' + n.length)
+  // OR: return str.split(' ').map(n => n + ' ' + n.length)
+  // OR: return str.split(' ').map(n => `${n} ${n.length}`)
+}
+
+
+// create class Ball, unless specified ballType is 'regular'
+class Ball{
+  constructor(ballType = 'regular'){
+    this.ballType = ballType
+  }
+}
