@@ -221,3 +221,10 @@ function oddEvenOrEither(n){
     (n / 2) % 2 === 0 ? 'Even' :
     'Odd'
 }
+
+
+// given an integral number, determine if it's a square number
+function isSquare(x){
+    return Math.ceil(Math.sqrt(x)) === Math.floor(Math.sqrt(x))
+    // OR: return Math.sqrt(x) % 1 === 0
+}
