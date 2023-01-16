@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vw;
+    background: #CCDDFF;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+form input, form textarea, #newsletter{
+    padding: 1.2%;
+    margin: 0.8%;
+    width: 65%;
+}
+
+textarea{
+    resize: vertical;
+}
+
+
+#newsletter input, #newsletter p{
+   display: inline-block;
+   width: fit-content;
+}
+
+button{
+    padding: 1.5% 2%;
+    margin: 2%;
+}
+
+form input, form textarea, #newsletter, button{
+    background: #F8FAFF;
+    box-shadow: 8px 8px 4px 4px #ABC7FF;
+    border: none;
+}
+
+#newsletter [type=checkbox]{
+    box-shadow: none;
+}
