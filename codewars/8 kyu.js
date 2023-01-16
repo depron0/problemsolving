@@ -1089,3 +1089,10 @@ class Ball{
     this.ballType = ballType
   }
 }
+
+
+// given two integers as string, output the sum as a string
+function sumIntegers(str1, str2){
+  return (Number(str1) + Number(str2)).toString()
+  // OR return (+str1 + +str2).toString()
+}
