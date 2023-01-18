@@ -37,6 +37,12 @@ button{
     margin: 2%;
 }
 
+button:hover{
+    color: #F8FAFF;
+    background: #ABC7FF;
+    box-shadow: 1px 1px 6px 6px #F8FAFF ;
+}
+
 form input, form textarea, #newsletter, button{
     background: #F8FAFF;
     box-shadow: 8px 8px 4px 4px #ABC7FF;
@@ -45,4 +51,18 @@ form input, form textarea, #newsletter, button{
 
 #newsletter [type=checkbox]{
     box-shadow: none;
+}
+
+
+.grow{
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover{
+    transform: scale(1.1);
+}
+
+
+.placeholderRed{
+    border: 2px solid red;
 }
