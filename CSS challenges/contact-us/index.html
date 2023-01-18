@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="./script.js"></script>
     <title>Contact Us</title>
 </head>
 <body>
     
-    <form>
+    <form onsubmit="return false">
         <h1>Contact us</h1>
         <input type="text" placeholder="Full Name" id="fullName">
         <input type="email" placeholder="Enter your Email" id="email">
+
         <textarea placeholder="Your Message" id="message" rows="4"></textarea>
         
         <section id="newsletter">
@@ -20,7 +22,7 @@
             <p>I want a monthly newsletter</p>
         </section>
         
-        <button>Submit</button>
+        <button onclick="submitInfo();" id="submitButton" class="grow">Submit</button>
     </form>
 </body>
 </html>
