@@ -228,3 +228,36 @@ function isSquare(x){
     return Math.ceil(Math.sqrt(x)) === Math.floor(Math.sqrt(x))
     // OR: return Math.sqrt(x) % 1 === 0
 }
+
+
+// create class for Song, with parameters title & artist
+// create function to calculate how many new listeners there are (given array of names, case insensitive)
+class Song{
+    constructor(title, artist){
+        this.title = title
+        this.artist = artist
+        this.listeners = []
+    }
+
+    howMany(arr){  
+        let count = 0
+        arr.forEach(x => {
+            if(!this.listeners.includes(x.toLowerCase())){
+                this.listeners.push(x.toLowerCase())
+                count++
+            }
+        })
+        return count
+    }
+}
+
+
+// find the next number with exactly two distinct digits
+function doubleton(num){ 
+    while (true){
+        num++
+        if(new Set(String(num)).size === 2) {
+            return num
+        }
+    }
+}
