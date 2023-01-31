@@ -1096,3 +1096,22 @@ function sumIntegers(str1, str2){
   return (Number(str1) + Number(str2)).toString()
   // OR return (+str1 + +str2).toString()
 }
+
+
+// 3 for 2 sale on mangos, given quantity and price - return total cost of the mangos
+function mangoSale(quantity, price){
+  return (quantity - Math.floor(quantity / 3)) * price
+}
+
+
+// Alias Generator: given list of {firstName and surname} to match initial of first and last name input
+// if name doesn't start with letter, return error statement
+function aliasGenerator(fName, lName){
+  let getInitial = (str) => str[0].toUpperCase()
+  let validityCheck = (name) => /^[a-z]/i.test(name)
+
+  return (validityCheck(fName) && validityCheck(lName)) ?
+  `${firstName[getInitial(fName)]}  ${surname[getInitial(lName)]}`
+  :
+  'Your name must start with a letter from A - Z.'
+}
