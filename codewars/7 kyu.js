@@ -261,3 +261,9 @@ function doubleton(num){
         }
     }
 }
+
+
+// return the top n elements from array
+function topElements(n, arr){
+    return arr.sort((a,b) => a - b).slice(arr.length -n)
+}
