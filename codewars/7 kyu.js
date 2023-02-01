@@ -267,3 +267,29 @@ function doubleton(num){
 function topElements(n, arr){
     return arr.sort((a,b) => a - b).slice(arr.length -n)
 }
+
+
+// given positive integer, check if Harshad number, return true if sum and sum reversed equals given integer, otherwise return false
+// example 1729: it's digit sum = 1 + 7 + 2 + 9 = 19; reverse sum = 91; 19 * 91 = 1729
+// Harshad number is an integer divisible by the sum of its digits, ex 21: 2 + 1 = 3, 21 is divisible by 3
+function numberJoy(num){
+    let sum = num.toString().split('').map(Number).reduce(function(a,b) {return a + b}, 0)
+    if(num % sum === 0){
+        return sum * sum.toString().split('').reverse().join('') === num ? true : false
+    } else {
+        return false
+    }
+}
+
+
+// Truncate given string, if it's longer than given maximum length - return string with '...' ending (remember these ADD to length of string)
+// if given maximum length is less than or equal to 3, the three dots do not add to length
+function truncateString(str, maxLength){
+    if(str.length > maxLength){
+        return maxLength <= 3
+        ? str.slice(0, maxLength) + '...'
+        : str.slice(0, maxLength - 3) + '...'
+    } else {
+        return str
+    }
+}
