@@ -293,3 +293,22 @@ function truncateString(str, maxLength){
         return str
     }
 }
+
+
+// given a positive integer n, return sum of all the cubed values from 1 to n
+function sumCubes(n){
+    let sum = 0
+    for(let i = 1; i <= n; i++){
+      sum += Math.pow(i,3)
+    }
+    return sum
+}
+
+
+// count consonants in string (without regex (with regex use match))
+function consonantCount(str){
+    let count = str.toLowerCase().split('').filter(x => 'bcdfghjklmnpqrstvwxyz'.includes(x))
+    return str.length != 0
+        ? count.length
+        : 0
+}
