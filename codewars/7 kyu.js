@@ -312,3 +312,19 @@ function consonantCount(str){
         ? count.length
         : 0
 }
+
+
+// convert hash to array, and return it with keys alphabetically sorted
+function hashToArr(hash){
+    return Object.entries(hash).sort()
+    /* let arr = []
+    for(const [key, value] of Object.entries(hash)){ arr.push([key, value])}
+    return arr.sort() */
+}
+
+
+// calculate number of people on the bus at the last stop
+// given an array of integer pairs, representing people getting on and off the bus
+function busPassengers(arr){
+    return arr.reduce((acc, cur) =>  acc + (cur[0] - cur[1]),0)
+}
