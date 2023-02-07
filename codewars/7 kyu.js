@@ -317,6 +317,7 @@ function consonantCount(str){
 // convert hash to array, and return it with keys alphabetically sorted
 function hashToArr(hash){
     return Object.entries(hash).sort()
+
     /* let arr = []
     for(const [key, value] of Object.entries(hash)){ arr.push([key, value])}
     return arr.sort() */
@@ -327,4 +328,21 @@ function hashToArr(hash){
 // given an array of integer pairs, representing people getting on and off the bus
 function busPassengers(arr){
     return arr.reduce((acc, cur) =>  acc + (cur[0] - cur[1]),0)
+}
+
+
+// hamming distance: given two binary numbers, how many character substitutions are needed for them to match
+function hammingDistance (a, b){
+    let count = 0
+    for(let i = 0; i < a.length; i++){
+    if(a[i] != b[i]){
+      count++}
+  }
+  return count
+}
+
+
+// calculate sum of integers in string, there may be other characters in the string, only positive integers
+function sumIntegersString(str){
+    return (str.match(/\d+/g) || []).reduce((acc,cur) => acc + +cur, 0)
 }
