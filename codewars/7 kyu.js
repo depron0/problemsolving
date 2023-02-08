@@ -346,3 +346,21 @@ function hammingDistance (a, b){
 function sumIntegersString(str){
     return (str.match(/\d+/g) || []).reduce((acc,cur) => acc + +cur, 0)
 }
+
+
+// given a nested list, find the sum of the minimum values of each row
+function sumMinVal(arr){
+    return arr.reduce((acc,cur) => acc + Math.min(...cur), 0) 
+}
+
+
+// cat in the hat has cat a under its hat, which has cat b under it's hat. first cat is 2000000 cat units tall, each cat is 2.5 times bigger than the one in their hat
+// given number of cats, return total height of cats if standing on top of eachother, fix to 3 decimal places
+function catsInHats(num){
+    let height = [2000000]
+    while (i < num) {
+        height.push(height / 2.5)
+        i++
+    }
+    return (height.reduce((acc,cur) => acc + cur, 0)).toFixed(3)
+}
