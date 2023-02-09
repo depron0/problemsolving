@@ -364,3 +364,18 @@ function catsInHats(num){
     }
     return (height.reduce((acc,cur) => acc + cur, 0)).toFixed(3)
 }
+
+
+// calculate total sum of internal angles of an n-sided simple polygon
+function polygonAngles(num){
+    return (num - 2) * 180
+}
+
+
+// given two integers, return sum of all integers between (including them), if equal return either number
+// formula = (number of integers / 2) * (first number + last number)
+function sumBetween(a, b){
+    let max = Math.max(a, b)
+    let min = Math.min(a, b)
+    return ((max - min + 1) / 2) * (min + max)
+}
