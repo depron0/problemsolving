@@ -379,3 +379,18 @@ function sumBetween(a, b){
     let min = Math.min(a, b)
     return ((max - min + 1) / 2) * (min + max)
 }
+
+
+// figure out original price of item, given discounted price and sale percentage, limit to 2 decimals
+function originalPrice(discountPrice, salePercentage){
+    return discountPrice / (1 - salePercentage / 100).toFixed(2)
+}
+
+
+// check if given string ends with given ending
+// return true if match, or if ending is empty string
+function stringMatch(str, ending){
+    return str.slice(- ending.length) === ending || ending.length === 0 ? true : false
+
+    // better: return str.endsWith(ending)
+}
