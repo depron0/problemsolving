@@ -394,3 +394,29 @@ function stringMatch(str, ending){
 
     // better: return str.endsWith(ending)
 }
+
+
+// correct the given timestring
+// if timestring is empty or null, return empty or null
+// if correct format, return the correct numbers (24 hour clock)
+function timeCorrect(timestring) {
+    let validTime = /^([0-9]{2}:[0-9]{2}:[0-9]{2})$/
+    if(!validTime.test(timestring)) return null
+    if(!timestring) return timestring
+
+    return (new Date(0,0,0,...timestring.split(':')))
+}
+
+
+// with two consecutive integers (k1, k2), find lowest possible integer where k1 and k2 multiplied by n result in same digits in different order
+// ex: k1 = 100, k2 = 101 -> n = 8919 (because 8919 * 100 = 891900 & 8919 * 101 = 900819)
+function findLowestInt(k) {
+    let n = 1
+    
+    while(n < Number.MAX_SAFE_INTEGER){
+        if((k * n).toString().split('').sort().join('') === ((k + 1) * n).toString().split('').sort().join('')){
+            return n
+        }
+        n += 1
+    }
+  }
