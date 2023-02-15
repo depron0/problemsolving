@@ -399,7 +399,7 @@ function stringMatch(str, ending){
 // correct the given timestring
 // if timestring is empty or null, return empty or null
 // if correct format, return the correct numbers (24 hour clock)
-function timeCorrect(timestring) {
+function timeCorrect(timestring){
     let validTime = /^([0-9]{2}:[0-9]{2}:[0-9]{2})$/
     if(!validTime.test(timestring)) return null
     if(!timestring) return timestring
@@ -410,7 +410,7 @@ function timeCorrect(timestring) {
 
 // with two consecutive integers (k1, k2), find lowest possible integer where k1 and k2 multiplied by n result in same digits in different order
 // ex: k1 = 100, k2 = 101 -> n = 8919 (because 8919 * 100 = 891900 & 8919 * 101 = 900819)
-function findLowestInt(k) {
+function findLowestInt(k){
     let n = 1
     
     while(n < Number.MAX_SAFE_INTEGER){
@@ -419,4 +419,18 @@ function findLowestInt(k) {
         }
         n += 1
     }
-  }
+}
+
+
+// Math.min function stopped working, make a function that returns minimum value
+// return NaN for anything that isn't a number, treat null like 0
+function minNum(a,b){
+    return (isNaN(a) || isNaN(b)) ? NaN : (a < b) ? +a : +b
+}
+
+
+// return complimentary DNA
+function complimentaryDNA(str){
+    let pairs = {'A':'T','T':'A','C':'G','G':'C'}
+    return str.split('').map(function(x){ return pairs[x] }).join('')
+}
