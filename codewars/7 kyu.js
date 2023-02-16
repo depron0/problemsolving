@@ -434,3 +434,19 @@ function complimentaryDNA(str){
     let pairs = {'A':'T','T':'A','C':'G','G':'C'}
     return str.split('').map(function(x){ return pairs[x] }).join('')
 }
+
+
+// find the single unique value in the array
+function uniqueNum(nums){
+    for (let x in nums){
+        if(nums.indexOf(nums[x]) === nums.lastIndexOf(nums[x])){
+            return nums[x]
+        }
+    }
+}
+
+
+// check if word is isogram (no repeating letters)
+function isogramCheck(str){
+    return new Set(str.toLowerCase()).size == str.length
+}
