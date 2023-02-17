@@ -450,3 +450,48 @@ function uniqueNum(nums){
 function isogramCheck(str){
     return new Set(str.toLowerCase()).size == str.length
 }
+
+
+// capitalise each word in the sentence
+function capitaliseAllWords(str){
+    return str.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+}
+
+
+// given array of positive numbers, return sum of two smallest values
+function twoSmallNums(arr){
+    arr.sort((a,b) => a - b)
+    return arr[0] + arr[1]
+}
+
+
+// given two strings, return the longest possible string (sorted) with distinct letters from the two strings
+function longest(s1, s2) {
+    let result = new Set(s1 + s2)
+    return Array.from(result).sort().join('')
+
+    // ALT 1: return [...new Set(s1 + s2)].sort().join('')
+    // ALT 2: return Array.from(new Set(s1 + s2)).sort().join('')
+}
+
+
+// given array of names, return only names with 4 letters
+function names(arr){
+    return arr.filter(word => word.length === 4)
+}
+
+
+// given array with persons age and handicap, return array of croquet membership they qualify for
+// senior: over 55 years old, handicap over 7, else: open
+function openOrSenior(arr){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i][0] >= 55 && arr[i][1] > 7){
+            return 'Senior'
+        } else {
+            return 'Open'
+        }
+    }
+
+    // BETTER:
+    return arr.map(([age,handicap]) => (age >= 55 && handicap > 7) ? 'Senior' : 'Open')
+}
