@@ -495,3 +495,25 @@ function openOrSenior(arr){
     // BETTER:
     return arr.map(([age,handicap]) => (age >= 55 && handicap > 7) ? 'Senior' : 'Open')
 }
+
+
+// return the first non-repeated character in given string
+// if all are unique: return first character, if there is no unique: return null
+function firstNonRepeat(str){
+    for (let x in str){
+        if(str.indexOf(str[x]) === str.lastIndexOf(str[x])){
+            return str[x]
+        }
+    }
+    return null
+}
+
+
+// make palindrome by concatenating one or more letters to end of string
+function palindrome(str){
+    for(let i = 1; i <= str.length; i++){
+        if(str.slice(i) == [...str.slice(i)].reverse().join('')){
+            return str + [...str.slice(0,i)].reverse().join('')
+        }
+    }
+}
