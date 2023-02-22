@@ -517,3 +517,10 @@ function palindrome(str){
         }
     }
 }
+
+
+// given a string, reverse each word in the string
+function reverseWords(str){
+    let arr = str.split(' ').map(word => word.split('').reverse().join(''))
+    return arr.join(' ')
+}
