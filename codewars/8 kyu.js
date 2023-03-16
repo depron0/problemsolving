@@ -1115,3 +1115,9 @@ function aliasGenerator(fName, lName){
   :
   'Your name must start with a letter from A - Z.'
 }
+
+
+// nerdify your strings: a/A = 4, e/E = 3, l = 1
+function nerdify(str){
+  str.replace(/a/gi, '4').replace(/e/gi, '3').replace(/l/g, '1')
+}
