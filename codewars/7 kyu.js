@@ -524,3 +524,13 @@ function reverseWords(str){
     let arr = str.split(' ').map(word => word.split('').reverse().join(''))
     return arr.join(' ')
 }
+
+
+// given a number, two indexes and a digit - check if digit exists in number within given indexes
+function checkForDigit(num, ind1, ind2, dig){
+    if(ind1 < ind2){
+        return num.toString().slice(ind1, ind2 + 1).includes(dig) ? true : false
+      } else return num.toString().slice(ind2, ind1 + 1).includes(dig) ? true : false
+
+    // return String(number).slice(Math.min(ind1, ind2), Math.max(ind1, ind2) + 1).includes(dig)
+}
