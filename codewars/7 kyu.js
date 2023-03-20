@@ -534,3 +534,17 @@ function checkForDigit(num, ind1, ind2, dig){
 
     // return String(number).slice(Math.min(ind1, ind2), Math.max(ind1, ind2) + 1).includes(dig)
 }
+
+
+// given two musical notes, return the melodic interval separating them (notes inclusive)
+// ex: D4 - G4 = 4 (D4 - E4 - F4 - G4) || A4 - C5 = 3 (A4 - B4 - C5)
+function melodicInterval(note1, note2){
+    let sequence = "CDEFGAB"
+    return Math.abs((sequence.indexOf(note2[0]) - sequence.indexOf(note1[0]) + (note2[1] - note1[1]) * sequence.length)) + 1
+}
+
+
+// function that returns whether it is running in strict mode
+function checkIfStrict(){
+    return !this
+}
