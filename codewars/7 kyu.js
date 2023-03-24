@@ -548,3 +548,16 @@ function melodicInterval(note1, note2){
 function checkIfStrict(){
     return !this
 }
+
+
+// create a mask for your CC number, change all but the last 4 digits to #
+function maskNum(num){
+    return num.split('').fill('#',0,-4).join('')
+}
+
+
+// given 3 integers, check if they can make a valid triangle
+// valid if: the sum of two sides is greater than the third side, and this is true for all three combinations
+function makeTriangle(a,b,c){
+    return a + b > c && a + c > b && b + c > a
+}
