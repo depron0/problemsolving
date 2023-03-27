@@ -8,3 +8,9 @@ function sumMultiples(num){
       return 0
     }
   }
+
+
+  // find the integer that occurs an odd amount of times
+  function findOddInt(arr){
+    return arr.find(item => arr.filter(el => el == item).length % 2)
+  }
