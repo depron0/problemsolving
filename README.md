@@ -1,5 +1,8 @@
 # Solving various coding problems / challenges
 
-Codewars folder contains seperate files for each difficulty level
+## Codewars
+- Seperate files for each difficulty level
+- 8 kyu is the easiest, lower numbers are harder
 
-CSS challenge folder contains subfolders for each challenge
+## CSS challenge
+- Sorted into subfolders for each challenge
