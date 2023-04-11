@@ -561,3 +561,17 @@ function maskNum(num){
 function makeTriangle(a,b,c){
     return a + b > c && a + c > b && b + c > a
 }
+
+
+// validating PIN with regex, should be exactly 4 or 6 digits
+function validatePIN(pin){
+    return (/^(\d{4}|\d{6})$/g).test(pin)
+        // assert position to start ^ and end $ of string (rules out matching part of a string), and test for \d any digit repeating {4} or {6} times
+}
+
+
+// given array of ones and zeroes, convert the equivalent binary value to an integer
+function binaryArrToNum(arr){
+    let bin = arr.join('')
+    return parseInt(bin, 2)
+}
