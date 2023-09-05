@@ -575,3 +575,12 @@ function binaryArrToNum(arr){
     let bin = arr.join('')
     return parseInt(bin, 2)
 }
+
+
+// given a string, return number of errors in string out of total
+// string contains only letters, letters a-m are correct - other letters should throw an error
+function printerError(str){
+    const regex = /[A-M]/gi
+    const correct = str.match(regex)
+    return `${str.length - correct.length}/${str.length}`
+}
