@@ -584,3 +584,16 @@ function printerError(str){
     const correct = str.match(regex)
     return `${str.length - correct.length}/${str.length}`
 }
+
+
+// given array of numbers, return them sorted, return empty array if null
+function sortNums(arr){
+    return arr ? arr.sort((a,b) => a - b) : []
+}
+
+
+// given two words, check for anagrams
+function anagram(str1, str2){
+    return str1.toLowerCase().split('').sort().join('') 
+    === str2.toLowerCase().split('').sort().join('')
+}
