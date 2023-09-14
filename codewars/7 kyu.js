@@ -597,3 +597,22 @@ function anagram(str1, str2){
     return str1.toLowerCase().split('').sort().join('') 
     === str2.toLowerCase().split('').sort().join('')
 }
+
+
+// find how many '1' bits in the binary representation of a given number
+// may not use string method
+function countOnes(num){
+    let binary = ''
+    while (num > 0){
+        binary = (num % 2) + binary
+        num = Math.floor(num/2)
+    }
+    return binary.split('').filter(x => x == 1).length
+}
+
+
+// given a year, determine if it is a leap year
+// years divisible by 4 and 400 are leap years, years divisible by 100 are not
+function isLeapYear(year){
+    return year % 100 != 0 && year % 4 === 0 || year % 400 === 0 ? true : false
+}
